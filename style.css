@@ -1,0 +1,205 @@
+header{
+    background-color: #581845;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.fakestore-logo{
+    width: 10%;
+    height: 10%;
+}
+
+header h1{
+    color: white;
+    display: inline;
+    margin: 0 auto;
+}
+
+.github-logo{
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+}
+
+main{
+    background-color: #D3D3D3;
+    padding: 20px;
+}
+
+.presentation-divs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#presentation-text{
+    width: 70%;
+    align-items: center;
+    font-weight: 500;
+    font-size: large;
+    text-align: justify;
+}
+
+.search-divs{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.search-category{
+    display: flex;
+    align-items: baseline;
+}
+
+#search-category-text{
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: large;
+}
+
+.products-divs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#products-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.row{
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 20px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body a{
+    margin-top: auto;
+}
+
+#description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-details{
+    width: 70vw;
+    background-color: #581845;
+    border-radius: 50px;
+    padding: 50px;
+}
+
+.cards-details img{
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.card-body-details h5{
+    color: beige;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.card-body-details p{
+    color: beige;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.return-button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#return-button{
+    background-color: #00B894;
+    width: 200%;
+    font-weight: 600;
+    font-size: large;
+}
+
+footer{
+    background-color: #581845;
+    padding: 20px;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    .fakestore-logo{
+        width: 20%;
+        height: 20%;
+    }
+
+    .search-divs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-category{
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .cards-details{
+        width: 80vw;
+        border-radius: 40px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fakestore-logo{
+        margin-bottom: 15px;
+    }
+
+    .github-logo{
+        display: none;
+    }
+
+    .cards-details{
+        width: 90vw;
+        border-radius: 30px;
+        padding: 20px;
+    }
+
+    .cards-details img{
+        border-radius: 10px;
+    }
+
+    .card-body-details h5{
+        font-size: x-small;
+    }
+    
+    .card-body-details p{
+        font-size: x-small;
+    }
+}

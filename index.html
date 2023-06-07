@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="/img/logo.png" alt="Logo FakeStore" class="fakestore-logo">
+        <h1>Fake Store</h1>
+        <a href="https://github.com/mateus-dsm/trabalho-fakestore-api"><img src="/img/github.png" alt="Logo GitHub" class="github-logo"></a>
+    </header>
+
+    <main>
+        <div class="presentation-divs">
+            <p id="presentation-text">
+                Welcome to the Fake Store Website, by Mateus Damasceno Sodré Mendes! Here, you will find all kinds of products, from electronics to clothing. You can sort them by category, search for a specific item or scroll through the cards below. My personal info is in the page's footer. Hope you enjoy!
+            </p>
+        </div>
+
+        <div class="search-divs">
+            <div class="search-product">
+                <form action="pesquisa.html" id="search-box">
+                    <input type="text" placeholder="Search product" id="search-text">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+    
+            <div class="search-category">
+                <p id="search-category-text">Search category:</p>
+                <select name="categories" id="category-options">
+                    <option value="1">All</option>
+                    <option value="2">Electronics</option>
+                    <option value="3">Jewelery</option>
+                    <option value="4">Men's clothing</option>
+                    <option value="5">Women's clothing</option>
+                </select>
+                <input type="submit" value="Search">
+            </div>
+        </div>
+
+        <div class="products-divs">
+            <div class="container">
+                <h1 id="products-title">Products</h1>
+                <div class="row" id="products">
+                    
+                </div>
+            </div>  
+        </div>      
+    </main>
+
+    <footer>
+        <p>Website designed by Mateus Damasceno Sodré Mendes</p>
+        <p>Software Engineering student @ PUC Minas</p>
+        <p>Student Id: 823132</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

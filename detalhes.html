@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="/img/logo.png" alt="Logo FakeStore" class="fakestore-logo">
+        <h1>Fake Store</h1>
+        <a href="https://github.com/mateus-dsm/trabalho-fakestore-api"><img src="/img/github.png" alt="Logo GitHub" class="github-logo"></a>
+    </header>
+
+    <main>
+        <div class="products-divs">
+            <div class="container">
+                <div id="description">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="return-button-div">
+            <a href="index.html"><button type="button" id="return-button">Return</button></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Website designed by Mateus Damasceno Sodré Mendes</p>
+        <p>Software Engineering student @ PUC Minas</p>
+        <p>Student Id: 823132</p>
+    </footer>
+
+    <script>
+        const id = window.location.hash.substring(1);
+        var url = 'https://fakestoreapi.com/products';
+
+        fetch(url).then(res=>res.json()).then(data=>{
+            let produto = data[id-1];
+            let str = `<div class="cards-details">
+                            <img src="${produto.image}" class="card-img-top img-details" alt="...">
+                            <div class="card-body-details">
+                                <h5 class="card-title-details">${produto.title}</h5>
+                                <h5 class="card-price-details">R$ ${produto.price}</h5>
+                                <p class="card-category-details">Category: ${produto.category}</p>
+                                <p class="card-text-details">${produto.description}</p>
+                            </div>
+                        </div>
+                        `;
+            document.getElementById("description").innerHTML = str;
+        });
+    </script>
+</body>
